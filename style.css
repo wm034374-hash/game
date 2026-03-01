@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #c3ecf7, #f5d0fe);
+  overflow: hidden;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+  padding-top: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+h1 { margin-bottom: 10px; }
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 15px 0;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #6c63ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #5548ff;
+}
+
+#gameArea {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 40px;
+  cursor: pointer;
+  animation: float linear forwards;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-120px); }
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.credit {
+  margin-top: 25px;
+  font-size: 14px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+.credit span {
+  font-weight: bold;
+  color: #6c63ff;
+}
